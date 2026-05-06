@@ -1,11 +1,8 @@
 # 🏥 Sistema de Gestión Hospitalaria (SGH)
 Presentado por: 
-Moises David Baquero Daza - 01240371051
-Keyner Steven Garcia Anaya - 01240371013
+*Moises David Baquero Daza - 01240371051* y 
+*Keyner Steven Garcia Anaya - 01240371013*
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Estado](https://img.shields.io/badge/Estado-Académico-green)
-![Licencia](https://img.shields.io/badge/Licencia-Educativa-lightgrey)
 
 ---
 
@@ -109,7 +106,7 @@ os.makedirs(RUTA_BASE, exist_ok=True)
 ## 👨‍💻 Autores
 
 - Moisés David Baquero Daza  
-- Keyner Steven  
+- Keyner Steven Garcia Anaya 
 
 ---
 
@@ -121,4 +118,4 @@ Este proyecto es de uso académico y educativo.
 
 ## ⭐ Notas
 
-Este proyecto puede escalarse fácilmente hacia un sistema hospitalario más completo agregando nuevas funcionalidades.
+Este sistema representa una base sólida para proyectos más complejos en el sector salud, y puede escalarse fácilmente agregando nuevas funcionalidades.
