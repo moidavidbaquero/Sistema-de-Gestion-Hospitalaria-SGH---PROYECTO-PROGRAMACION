@@ -1,121 +1,172 @@
+
 # 🏥 Sistema de Gestión Hospitalaria (SGH)
-Presentado por: 
-*Moises David Baquero Daza - 01240371051* y 
-*Keyner Steven Garcia Anaya - 01240371013*
 
+## 📌 Descripción del Proyecto
 
----
+Este proyecto corresponde a un Sistema de Gestión Hospitalaria (SGH) desarrollado en Python bajo el enfoque de Programación Orientada a Objetos (POO).
 
-## 📌 Descripción
+El sistema está orientado a la administración básica de información hospitalaria, incluyendo:
 
-El **Sistema de Gestión Hospitalaria (SGH)** es una aplicación desarrollada en Python que permite modelar y gestionar información esencial de una institución de salud, como pacientes, médicos y especialidades.
-
-Este proyecto está orientado a la aplicación de conceptos de **Programación Orientada a Objetos (POO)** en un contexto real.
-
----
-
-## 🧠 Conceptos aplicados
-
-- Encapsulamiento  
-- Abstracción  
-- Modularidad  
-- Uso de clases y enumeraciones  
+- Gestión de pacientes
+- Gestión de médicos
+- Gestión de especialidades médicas
+- Persistencia de datos en archivos
+- Menús interactivos en consola
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+# 👨‍💻 Autores
 
-- Python 3  
-- Google Colab  
-- Google Drive  
+- MOISES DAVID BAQUERO DAZA
+- KEYNER STEVEN GARCIA ANAYA
 
 ---
 
-## ⚙️ Configuración
+# 🧱 Estructura del Proyecto
 
-### 1. Montar Google Drive
-
-```python
-from google.colab import drive
-drive.mount('/content/drive')
+```txt
+📦 Sistema_Gestion_Hospitalaria
+ ┣ 📂 data
+ ┃ ┣ 📜 pacientes.json
+ ┃ ┣ 📜 medicos.json
+ ┃ ┗ 📜 especialidades.json
+ ┃
+ ┣ 📂 models
+ ┃ ┣ 📜 paciente.py
+ ┃ ┣ 📜 medico.py
+ ┃ ┗ 📜 especialidad.py
+ ┃
+ ┣ 📂 repositories
+ ┃ ┣ 📜 paciente_repository.py
+ ┃ ┣ 📜 medico_repository.py
+ ┃ ┗ 📜 especialidad_repository.py
+ ┃
+ ┣ 📂 services
+ ┃ ┣ 📜 paciente_service.py
+ ┃ ┣ 📜 medico_service.py
+ ┃ ┗ 📜 especialidad_service.py
+ ┃
+ ┣ 📂 utils
+ ┃ ┗ 📜 archivo_util.py
+ ┃
+ ┣ 📜 main.py
+ ┣ 📜 README.md
+ ┗ 📜 PROGRAMACION_PROYECTO.ipynb
 ```
 
-### 2. Definir ruta base
+---
 
-```python
-RUTA_BASE = '/content/drive/MyDrive/SGH/datos/'
-```
+# 🔍 Explicación de la Arquitectura
 
-### 3. Crear directorios
+## 🖥️ Menús Consola
+Gestionan la interacción con el usuario mediante opciones y navegación del sistema.
 
-```python
-import os
-os.makedirs(RUTA_BASE, exist_ok=True)
-```
+## ⚙️ Servicios
+Contienen la lógica de negocio:
+- Validaciones
+- Reglas del sistema
+- Procesamiento de información
+
+## 🗂️ Repositorios
+Se encargan de:
+- Guardar datos
+- Leer archivos
+- Actualizar registros
+- Buscar información
+
+## 💾 Persistencia
+La información se almacena usando archivos JSON/TXT para mantener los datos entre ejecuciones.
 
 ---
 
-## 🧱 Estructura del proyecto
+# 🧩 Modelo de Dominio
 
-### 🔹 Enumeraciones
+## Enumeraciones
+- Régimen de salud
+- Estado de citas
+- Especialidades médicas
 
-#### RegimenEnum
-- CONTRIBUTIVO  
-- SUBSIDIADO  
+## 🧍 Paciente
+- Número de documento
+- Nombre
+- Fecha de nacimiento
+- Tipo de sangre
+- EPS
+- Régimen
+- Antecedentes médicos
 
----
+## 👨‍⚕️ Médico
+- Identificación
+- Nombre
+- Especialidad
+- Registro profesional
 
-### 🔹 Clases
-
-#### Especialidad
-- Código  
-- Nombre  
-- Descripción  
-
-#### Paciente
-- Documento  
-- Nombre  
-- Fecha de nacimiento  
-- Tipo de sangre  
-- Régimen  
-
-#### Medico
-- Información del profesional de salud  
-
----
-
-## 🎯 Objetivos
-
-- Modelar entidades del sistema de salud  
-- Aplicar Programación Orientada a Objetos  
-- Gestionar información hospitalaria básica  
-- Integrar almacenamiento en la nube  
+## 🏥 Especialidad
+- Código
+- Nombre
+- Descripción
 
 ---
 
-## 🚀 Mejoras futuras
+# 🗂️ Repositorios
 
-- Base de datos (SQLite, PostgreSQL)  
-- API REST (Flask / FastAPI)  
-- Interfaz gráfica  
-- Gestión de citas médicas  
-- Sistema de autenticación  
-
----
-
-## 👨‍💻 Autores
-
-- Moisés David Baquero Daza  
-- Keyner Steven Garcia Anaya 
+## Repositorios encontrados
+- ArchivoUtil
+- EspecialidadRepository
+- PacienteRepository
+- MedicoRepository
 
 ---
 
-## 📄 Licencia
+# ⚙️ Servicios
 
-Este proyecto es de uso académico y educativo.
+## Servicios implementados
+- EspecialidadService
+- PacienteService
+- MedicoService
 
 ---
 
-## ⭐ Notas
+# 🖥️ Interfaz de Usuario
 
-Este sistema representa una base sólida para proyectos más complejos en el sector salud, y puede escalarse fácilmente agregando nuevas funcionalidades.
+El sistema utiliza una interfaz basada en consola con menús interactivos.
+
+## Menús disponibles
+- Menú Principal
+- Menú de Especialidades
+- Menú de Pacientes
+- Menú de Médicos
+
+---
+
+# ▶️ Ejecución del Proyecto
+
+Abrir el notebook en Google Colab y ejecutar todas las celdas.
+
+---
+
+# 🛠️ Tecnologías Utilizadas
+
+- Python
+- Programación Orientada a Objetos (POO)
+- Google Colab
+- Google Drive
+- Enumeraciones (Enum)
+- Persistencia en archivos JSON
+
+---
+
+# 📚 Conceptos Aplicados
+
+- Encapsulamiento
+- Separación por capas
+- Persistencia de datos
+- Diseño modular
+- Reutilización de código
+- Arquitectura basada en servicios y repositorios
+
+---
+
+# ✅ Conclusión
+
+El proyecto implementa una arquitectura organizada para la gestión hospitalaria usando Programación Orientada a Objetos.
