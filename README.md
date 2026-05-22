@@ -1,5 +1,5 @@
 
-# 🏥 Sistema de Gestión Hospitalaria (SGH) - Avance 3
+# 🏥 Sistema de Gestión Hospitalaria (SGH)
 
 ## 📌 Descripción del Proyecto
 
