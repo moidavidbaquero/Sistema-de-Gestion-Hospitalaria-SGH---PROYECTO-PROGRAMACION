@@ -1,17 +1,21 @@
 
-# 🏥 Sistema de Gestión Hospitalaria (SGH)
+# 🏥 Sistema de Gestión Hospitalaria (SGH) - Avance 3
 
 ## 📌 Descripción del Proyecto
 
 Este proyecto corresponde a un Sistema de Gestión Hospitalaria (SGH) desarrollado en Python bajo el enfoque de Programación Orientada a Objetos (POO).
 
-El sistema está orientado a la administración básica de información hospitalaria, incluyendo:
+El sistema permite administrar información hospitalaria mediante una arquitectura modular basada en modelos, servicios y repositorios.
+
+### Funcionalidades principales
 
 - Gestión de pacientes
 - Gestión de médicos
 - Gestión de especialidades médicas
-- Persistencia de datos en archivos
-- Menús interactivos en consola
+- Persistencia de datos
+- Menús interactivos
+- Validaciones del sistema
+- Organización modular por capas
 
 ---
 
@@ -51,7 +55,7 @@ El sistema está orientado a la administración básica de información hospital
  ┃
  ┣ 📜 main.py
  ┣ 📜 README.md
- ┗ 📜 PROGRAMACION_PROYECTO.ipynb
+ ┗ 📜 PROGRAMACION_PROYECTO_3.ipynb
 ```
 
 ---
@@ -59,49 +63,69 @@ El sistema está orientado a la administración básica de información hospital
 # 🔍 Explicación de la Arquitectura
 
 ## 🖥️ Menús Consola
-Gestionan la interacción con el usuario mediante opciones y navegación del sistema.
+Gestionan la interacción con el usuario mediante opciones y navegación.
 
 ## ⚙️ Servicios
-Contienen la lógica de negocio:
+Contienen la lógica del negocio:
 - Validaciones
 - Reglas del sistema
-- Procesamiento de información
+- Procesamiento de datos
 
 ## 🗂️ Repositorios
 Se encargan de:
-- Guardar datos
-- Leer archivos
-- Actualizar registros
-- Buscar información
+- Persistencia
+- Lectura de archivos
+- Escritura de datos
+- Búsquedas
 
 ## 💾 Persistencia
-La información se almacena usando archivos JSON/TXT para mantener los datos entre ejecuciones.
+La información se almacena utilizando archivos JSON/TXT.
 
 ---
 
 # 🧩 Modelo de Dominio
 
 ## Enumeraciones
-- Régimen de salud
-- Estado de citas
+El sistema implementa enumeraciones para representar:
+
 - Especialidades médicas
+- Régimen de salud
+- Estados del sistema
+
+---
 
 ## 🧍 Paciente
-- Número de documento
+
+Representa un paciente del hospital.
+
+### Incluye:
+- Documento
 - Nombre
 - Fecha de nacimiento
-- Tipo de sangre
 - EPS
 - Régimen
+- Tipo de sangre
 - Antecedentes médicos
 
+---
+
 ## 👨‍⚕️ Médico
+
+Representa un médico del hospital.
+
+### Incluye:
 - Identificación
 - Nombre
 - Especialidad
 - Registro profesional
 
+---
+
 ## 🏥 Especialidad
+
+Representa una especialidad médica.
+
+### Incluye:
 - Código
 - Nombre
 - Descripción
@@ -111,37 +135,42 @@ La información se almacena usando archivos JSON/TXT para mantener los datos ent
 # 🗂️ Repositorios
 
 ## Repositorios encontrados
+
 - ArchivoUtil
-- EspecialidadRepository
 - PacienteRepository
 - MedicoRepository
+- EspecialidadRepository
 
 ---
 
 # ⚙️ Servicios
 
 ## Servicios implementados
-- EspecialidadService
+
 - PacienteService
 - MedicoService
+- EspecialidadService
 
 ---
 
 # 🖥️ Interfaz de Usuario
 
-El sistema utiliza una interfaz basada en consola con menús interactivos.
+El sistema utiliza menús interactivos en consola.
 
 ## Menús disponibles
-- Menú Principal
-- Menú de Especialidades
-- Menú de Pacientes
-- Menú de Médicos
+
+- Menú principal
+- Gestión de pacientes
+- Gestión de médicos
+- Gestión de especialidades
 
 ---
 
 # ▶️ Ejecución del Proyecto
 
-Abrir el notebook en Google Colab y ejecutar todas las celdas.
+1. Abrir el notebook en Google Colab.
+2. Ejecutar todas las celdas.
+3. Navegar por el menú principal.
 
 ---
 
@@ -151,22 +180,35 @@ Abrir el notebook en Google Colab y ejecutar todas las celdas.
 - Programación Orientada a Objetos (POO)
 - Google Colab
 - Google Drive
-- Enumeraciones (Enum)
-- Persistencia en archivos JSON
+- JSON
+- Enumeraciones (`Enum`)
 
 ---
 
 # 📚 Conceptos Aplicados
 
 - Encapsulamiento
-- Separación por capas
+- Modularidad
 - Persistencia de datos
-- Diseño modular
+- Arquitectura por capas
+- Separación de responsabilidades
 - Reutilización de código
-- Arquitectura basada en servicios y repositorios
+
+---
+
+# 🚀 Mejoras Implementadas en el Avance 3
+
+- Mejor organización del código
+- Separación de capas
+- Validaciones adicionales
+- Persistencia optimizada
+- Menús más estructurados
+- Reutilización de componentes
 
 ---
 
 # ✅ Conclusión
 
-El proyecto implementa una arquitectura organizada para la gestión hospitalaria usando Programación Orientada a Objetos.
+El proyecto implementa una solución organizada para la gestión hospitalaria usando Programación Orientada a Objetos.
+
+La arquitectura modular facilita el mantenimiento, escalabilidad y reutilización del código.
